@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ============================================================
+     SEO — TÍTULO Y META TAGS
+     Reemplazá la URL canónica y el dominio de Open Graph cuando
+     tengas el dominio final publicado.
+============================================================ -->
+<title data-i18n="meta.title">Turbo Green Energy Corp | Repuestos para Turbinas y Soluciones de Energía Verde</title>
+<meta name="description" data-i18n-attr="content" data-i18n="meta.description" content="Más de 40 años de experiencia en soluciones energéticas, repuestos para turbinas (SGT 400) y energía verde. Con sede en Miami, servicio a nivel global para la industria Oil & Gas.">
+<meta name="keywords" content="repuestos turbinas, SGT 400, energía verde, soluciones energéticas, oil and gas, Miami, Palmetto Bay, turbine parts, green energy">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.turbogreenenergy.com/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Turbo Green Energy Corp | Energía. Turbinas. Sostenibilidad.">
+<meta property="og:description" content="Más de 40 años potenciando la industria energética global con repuestos para turbinas y soluciones de energía verde.">
+<meta property="og:image" content="https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&w=1200&q=80">
+<meta property="og:locale" content="es_ES">
+
+<!-- Favicon placeholder — reemplazar por el ícono real de marca -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%230A2540%22/><path d=%22M50 15 L62 45 L50 40 L38 45 Z%22 fill=%22%2322C55E%22/></svg>">
+
+<!-- Google Fonts: Space Grotesk (display/técnica), Inter (cuerpo), IBM Plex Mono (datos) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+
+<!-- Tailwind CSS vía CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          ink: '#04090F',
+          navy: { 950:'#071527', 900:'#0A1628', 800:'#0F2238', 700:'#163459' },
+          green: { 900:'#0A3A2C', 700:'#0F6B4E', 500:'#17E3A6', 400:'#5CF2C7' },
+          amber: { 500:'#F5A623' },
+        },
+        fontFamily: {
+          display: ['"Space Grotesk"','sans-serif'],
+          body: ['Inter','sans-serif'],
+          mono: ['"IBM Plex Mono"','monospace'],
+        }
+      }
+    }
+  }
+</script>
+
+<!-- ============================================================
+     SCHEMA.ORG — LocalBusiness / Organization
+     Reemplazá teléfono, dirección y coordenadas cuando los tengas.
+============================================================ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Turbo Green Energy Corp",
+  "url": "https://www.turbogreenenergy.com/",
+  "logo": "https://www.turbogreenenergy.com/logo.png",
+  "description": "Empresa de servicios energéticos con más de 40 años de experiencia: repuestos para turbinas, soluciones energéticas y energía verde a nivel global.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Palmetto Bay",
+    "addressRegion": "FL",
+    "addressCountry": "US"
+  },
+  "telephone": "[TELÉFONO PENDIENTE]",
+  "email": "[EMAIL PENDIENTE]"
+}
+</script>
+
+<style>
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', sans-serif; background:#F8FAFC; color:#0F172A; }
+  h1,h2,h3,h4,.font-display { font-family: 'Space Grotesk', sans-serif; }
+  .font-mono-data { font-family: 'IBM Plex Mono', monospace; }
+
+  /* Scrollbar de marca */
+  ::-webkit-scrollbar { width: 10px; }
+  ::-webkit-scrollbar-track { background:#0A1628; }
+  ::-webkit-scrollbar-thumb { background:#17E3A6; border-radius: 10px; }
+
+  /* Foco visible accesible */
+  a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible {
+    outline: 3px solid #17E3A6; outline-offset: 2px;
+  }
+
+  /* ---------- Reveal-on-scroll ---------- */
+  .reveal { opacity: 0; transform: translateY(28px); transition: opacity .7s ease, transform .7s ease; }
+  .reveal.is-visible { opacity: 1; transform: translateY(0); }
+  .reveal-scale { opacity: 0; transform: scale(.92); transition: opacity .6s ease, transform .6s ease; }
+  .reveal-scale.is-visible { opacity: 1; transform: scale(1); }
+  .stagger > * { transition-delay: calc(var(--i, 0) * 90ms); }
+
+  /* ---------- Grilla de plano técnico (blueprint) ---------- */
+  .blueprint-grid {
+    background-image:
+      linear-gradient(rgba(23,227,166,.14) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(23,227,166,.14) 1px, transparent 1px);
+    background-size: 46px 46px;
+    -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, black 40%, transparent 100%);
+            mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, black 40%, transparent 100%);
+  }
+  .blueprint-grid-soft {
+    background-image:
+      linear-gradient(rgba(10,22,40,.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(10,22,40,.06) 1px, transparent 1px);
+    background-size: 42px 42px;
+  }
+
+  /* ---------- Marco de esquinas técnico (signature element) ---------- */
+  .corner-frame { position: relative; }
+  .corner-frame::before, .corner-frame::after {
+    content:''; position:absolute; width:20px; height:20px;
+    border: 2px solid #17E3A6; pointer-events:none; opacity:.85; z-index:2;
+  }
+  .corner-frame::before { top:-2px; left:-2px; border-right:none; border-bottom:none; }
+  .corner-frame::after  { bottom:-2px; right:-2px; border-left:none; border-top:none; }
+  .corner-frame-dark::before, .corner-frame-dark::after { border-color:#0A1628; opacity:.5; }
+
+  /* ---------- Chips "spec-tag" (eyebrows de sección) ---------- */
+  .eyebrow {
+    display:inline-flex; align-items:center; gap:.55rem;
+    letter-spacing:.14em; text-transform:uppercase; font-size:.72rem; font-weight:600;
+    font-family:'IBM Plex Mono', monospace;
+    padding:.4rem .85rem; border:1px solid currentColor; border-radius:2px; opacity:.92;
+  }
+
+  /* ---------- Numerales fantasma de sección ---------- */
+  .ghost-index {
+    position:absolute; top:-.5rem; right:1.5rem; font-family:'Space Grotesk',sans-serif;
+    font-weight:700; font-size: clamp(4.5rem, 12vw, 9rem); line-height:1; pointer-events:none;
+    color: rgba(23,227,166,.06); user-select:none; z-index:0;
+  }
+  .ghost-index-light { color: rgba(10,22,40,.045); }
+
+  /* ---------- CTA — panel con esquina cortada (lenguaje "industrial") ---------- */
+  .btn-primary, .btn-secondary {
+    clip-path: polygon(14px 0, 100% 0, 100% calc(100% - 14px), calc(100% - 14px) 100%, 0 100%, 0 14px);
+    border-radius: 0;
+  }
+  .btn-primary {
+    background:#17E3A6; color:#04090F; font-weight:700;
+    padding: .9rem 2.1rem; transition: all .25s ease;
+    box-shadow: 0 10px 28px -10px rgba(23,227,166,.55);
+    display:inline-flex; align-items:center; gap:.6rem;
+  }
+  .btn-primary:hover { background:#5CF2C7; box-shadow: 0 14px 32px -8px rgba(23,227,166,.7); transform: translateY(-2px); }
+  .btn-secondary {
+    background: transparent; color:#F8FAFC; font-weight:600;
+    padding: .9rem 2.1rem; border:1.5px solid rgba(248,250,252,.3);
+    transition: all .25s ease;
+  }
+  .btn-secondary:hover { border-color:#17E3A6; background: rgba(23,227,166,.08); }
+
+  /* ---------- Nav ---------- */
+  #site-nav { transition: background-color .3s ease, box-shadow .3s ease; border-bottom: 1px solid transparent; }
+  #site-nav.scrolled { background-color: rgba(4,9,15,.9); backdrop-filter: blur(10px); border-bottom-color: rgba(23,227,166,.15); }
+
+  /* ---------- Elemento de firma: marca turbina→hoja ---------- */
+  .signature-mark { animation: spin-slow 42s linear infinite; }
+  @keyframes spin-slow { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+  @keyframes pulse-dot { 0%,100% { opacity:.3; } 50% { opacity:1; } }
+  .pulse-dot { animation: pulse-dot 2.4s ease-in-out infinite; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .signature-mark, .pulse-dot, .marquee-track { animation: none !important; }
+    .reveal, .reveal-scale { transition: none; opacity:1; transform:none; }
+  }
+
+  #hero-bg { will-change: transform; }
+
+  /* ---------- Cards ---------- */
+  .service-row, .adv-card, .testimonial-card { transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease, background-color .3s ease; }
+  .service-row:hover { border-color:#17E3A6; background-color: rgba(23,227,166,.05); }
+  .adv-card:hover { transform: translateY(-6px); box-shadow: 0 20px 40px -16px rgba(10,22,40,.2); border-color:#17E3A6; }
+  .testimonial-card:hover { transform: translateY(-4px); box-shadow: 0 16px 32px -14px rgba(10,22,40,.18); }
+
+  /* ---------- Marquee de logos de clientes ---------- */
+  .marquee { overflow:hidden; -webkit-mask-image: linear-gradient(90deg, transparent, black 10%, black 90%, transparent); mask-image: linear-gradient(90deg, transparent, black 10%, black 90%, transparent); }
+  .marquee-track { display:flex; gap:3.5rem; width:max-content; animation: marquee 26s linear infinite; }
+  .marquee:hover .marquee-track { animation-play-state: paused; }
+  @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+  [data-lang-switch] { transition: all .2s ease; }
+
+  /* ---------- Divisor angulado entre hero y siguiente sección ---------- */
+  .angled-divider { position:absolute; bottom:-1px; left:0; width:100%; height:64px; background:#F8FAFC; clip-path: polygon(0 100%, 100% 100%, 100% 40%, 0 100%); }
+</style>
+
+</head>
+
+<body class="bg-slate-50 text-slate-900 antialiased">
+
+<!-- ============================================================
+     NAVEGACIÓN FIJA
+============================================================ -->
+<header id="site-nav" class="fixed top-0 left-0 w-full z-50 py-4">
+  <nav class="max-w-[1200px] mx-auto px-6 flex items-center justify-between">
+    <!-- Logo / wordmark (placeholder — reemplazar por logo real en /assets/logo.svg) -->
+    <a href="#inicio" class="flex items-center gap-2.5 text-slate-50">
+      <svg width="30" height="30" viewBox="0 0 100 100" fill="none">
+        <rect width="100" height="100" rx="4" fill="#17E3A6"/>
+        <path d="M50 18 L64 50 L50 44 L36 50 Z" fill="#04090F"/>
+      </svg>
+      <span class="font-display font-bold text-lg tracking-tight leading-none">TURBO GREEN<br><span class="text-[10px] font-mono-data font-medium tracking-[.2em] text-green-400">ENERGY CORP</span></span>
+    </a>
+
+    <ul class="hidden lg:flex items-center gap-8 text-sm font-medium text-slate-200">
+      <li><a href="#inicio" class="hover:text-green-400 transition-colors" data-i18n="nav.home">Inicio</a></li>
+      <li><a href="#nosotros" class="hover:text-green-400 transition-colors" data-i18n="nav.about">Nosotros</a></li>
+      <li><a href="#servicios" class="hover:text-green-400 transition-colors" data-i18n="nav.services">Servicios</a></li>
+      <li><a href="#ventajas" class="hover:text-green-400 transition-colors" data-i18n="nav.advantages">Ventajas</a></li>
+      <li><a href="#testimonios" class="hover:text-green-400 transition-colors" data-i18n="nav.testimonials">Testimonios</a></li>
+      <li><a href="#contacto" class="hover:text-green-400 transition-colors" data-i18n="nav.contact">Contacto</a></li>
+    </ul>
+
+    <div class="flex items-center gap-4">
+      <!-- Selector de idioma -->
+      <div class="hidden sm:flex items-center gap-1 text-xs font-mono-data font-semibold bg-white/5 border border-white/10 p-1">
+        <button data-lang-switch="es" class="px-2.5 py-1 text-slate-50 bg-green-500/90">ES</button>
+        <button data-lang-switch="en" class="px-2.5 py-1 text-slate-300 hover:text-white">EN</button>
+        <button data-lang-switch="pt" class="px-2.5 py-1 text-slate-300 hover:text-white">PT</button>
+      </div>
+
+      <a href="#contacto" class="hidden lg:inline-flex btn-primary !py-2.5 !px-5 text-sm" data-i18n="nav.cta">Solicitar cotización</a>
+
+      <!-- Botón menú móvil -->
+      <button id="mobile-menu-btn" aria-label="Abrir menú" aria-expanded="false" class="lg:hidden text-slate-50 p-2">
+        <svg id="icon-open" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        <svg id="icon-close" class="hidden" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6l-12 12"/></svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Menú móvil desplegable -->
+  <div id="mobile-menu" class="hidden lg:hidden bg-ink/98 backdrop-blur mt-4 mx-4 border border-white/10 p-6">
+    <ul class="flex flex-col gap-4 text-slate-100 font-medium">
+      <li><a href="#inicio" class="mobile-link block" data-i18n="nav.home">Inicio</a></li>
+      <li><a href="#nosotros" class="mobile-link block" data-i18n="nav.about">Nosotros</a></li>
+      <li><a href="#servicios" class="mobile-link block" data-i18n="nav.services">Servicios</a></li>
+      <li><a href="#ventajas" class="mobile-link block" data-i18n="nav.advantages">Ventajas</a></li>
+      <li><a href="#testimonios" class="mobile-link block" data-i18n="nav.testimonials">Testimonios</a></li>
+      <li><a href="#contacto" class="mobile-link block" data-i18n="nav.contact">Contacto</a></li>
+    </ul>
+    <div class="flex gap-1 mt-5 text-xs font-mono-data font-semibold">
+      <button data-lang-switch="es" class="px-3 py-1.5 bg-green-500/90 text-slate-950">ES</button>
+      <button data-lang-switch="en" class="px-3 py-1.5 text-slate-300 border border-white/10">EN</button>
+      <button data-lang-switch="pt" class="px-3 py-1.5 text-slate-300 border border-white/10">PT</button>
+    </div>
+  </div>
+</header>
+
+<!-- ============================================================
+     HERO — panel dividido con diagrama técnico tipo "plano"
+============================================================ -->
+<section id="inicio" class="relative min-h-screen flex items-center overflow-hidden bg-ink">
+  <div class="absolute inset-0 blueprint-grid"></div>
+
+  <div id="hero-bg" class="absolute inset-0">
+    <img src="assets/hero-exterior.jpg"
+         alt="Planta industrial con tuberías y chimenea al aire libre" class="w-full h-full object-cover opacity-[.22]">
+    <div class="absolute inset-0 bg-gradient-to-b from-ink/55 via-ink/85 to-ink"></div>
+  </div>
+
+  <div class="absolute top-1/3 -left-24 w-[520px] h-[520px] bg-green-500/10 blur-[130px] rounded-full pointer-events-none"></div>
+
+  <div class="relative z-10 max-w-[1200px] mx-auto px-6 pt-32 pb-24 grid lg:grid-cols-[1.15fr_.85fr] gap-14 items-center w-full">
+
+    <!-- Columna texto -->
+    <div>
+      <div class="reveal is-visible flex flex-wrap items-center gap-3 mb-7">
+        <span class="eyebrow text-green-400" data-i18n="hero.eyebrow">Repuestos para turbinas · Energía verde · Alcance global</span>
+        <span class="font-mono-data text-[11px] text-slate-500 hidden sm:inline">25.62°N · 80.33°W — MIAMI, FL</span>
+      </div>
+      <h1 class="reveal is-visible text-5xl md:text-6xl lg:text-[4.4rem] font-bold tracking-tight text-slate-50 leading-[0.98]" data-i18n="hero.title">
+        Potenciando <span class="text-green-400">la transición</span> energética global
+      </h1>
+      <p class="reveal is-visible mt-7 text-lg md:text-xl text-slate-300 max-w-xl" data-i18n="hero.subtitle">
+        Más de 40 años entregando repuestos para turbinas (como la SGT 400), soluciones energéticas integrales y proyectos de energía verde para la industria Oil &amp; Gas en todo el mundo.
+      </p>
+      <div class="reveal is-visible mt-10 flex flex-wrap gap-4">
+        <a href="#contacto" class="btn-primary" data-i18n="hero.ctaPrimary">
+          Solicitar cotización
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#servicios" class="btn-secondary" data-i18n="hero.ctaSecondary">Conocer servicios</a>
+      </div>
+    </div>
+
+    <!-- Columna diagrama técnico (elemento de firma) -->
+    <div class="reveal-scale relative hidden md:block">
+      <div class="corner-frame relative bg-navy-900/70 border border-white/10 p-10 lg:p-12 overflow-hidden">
+        <div class="absolute inset-0 blueprint-grid-soft opacity-30" style="filter:invert(1) brightness(.4);"></div>
+
+        <svg class="signature-mark relative z-10 mx-auto" width="200" height="200" viewBox="0 0 100 100" fill="none">
+          <circle cx="50" cy="50" r="46" stroke="#17E3A6" stroke-width=".6" stroke-dasharray="2 3" opacity=".5"/>
+          <path d="M50 10 L61 46 L50 39 L39 46 Z" fill="#17E3A6"/>
+          <path d="M90 50 L54 61 L61 50 L54 39 Z" fill="#17E3A6"/>
+          <path d="M50 90 L39 54 L50 61 L61 54 Z" fill="#17E3A6"/>
+          <path d="M10 50 L46 39 L39 50 L46 61 Z" fill="#17E3A6"/>
+          <circle cx="50" cy="50" r="8" fill="#F8FAFC"/>
+        </svg>
+
+        <div class="relative z-10 grid grid-cols-2 gap-x-4 gap-y-3 mt-10 font-mono-data text-[10.5px] tracking-wide">
+          <div class="flex items-center gap-2 text-slate-300"><span class="w-1.5 h-1.5 rounded-full bg-green-500 pulse-dot"></span>SGT 400 COMPAT.</div>
+          <div class="flex items-center gap-2 text-slate-300"><span class="w-1.5 h-1.5 rounded-full bg-green-500 pulse-dot"></span>GREEN ENERGY</div>
+          <div class="flex items-center gap-2 text-slate-300"><span class="w-1.5 h-1.5 rounded-full bg-green-500 pulse-dot"></span>GLOBAL SUPPLY</div>
+          <div class="flex items-center gap-2 text-slate-300"><span class="w-1.5 h-1.5 rounded-full bg-green-500 pulse-dot"></span>40+ YEARS</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="angled-divider"></div>
+
+  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 text-slate-500 animate-bounce hidden md:block">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+  </div>
+</section>
+
+<!-- ============================================================
+     GALERÍA — fotos reales de planta / equipos
+============================================================ -->
+<section class="relative py-24 md:py-32 bg-navy-950 overflow-hidden">
+  <div class="absolute inset-0 blueprint-grid opacity-20"></div>
+  <div class="max-w-[1200px] mx-auto px-6 relative">
+    <div class="reveal max-w-2xl mb-14">
+      <p class="eyebrow text-green-400 mb-5" data-i18n="gallery.eyebrow">Instalaciones</p>
+      <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-white" data-i18n="gallery.title">Equipos y plantas en operación</h2>
+    </div>
+
+    <div class="grid md:grid-cols-3 md:grid-rows-2 gap-6 md:h-[460px] stagger">
+      <div class="reveal-scale corner-frame md:col-span-2 md:row-span-2 h-[320px] md:h-full" style="--i:0">
+        <img src="assets/galeria-planta-aerea.jpg" alt="Sala de turbinas en planta de energía" class="w-full h-full object-cover">
+      </div>
+      <div class="reveal-scale corner-frame h-[220px] md:h-full" style="--i:1">
+        <img src="assets/galeria-tuberias.jpg" alt="Tuberías y válvulas industriales" class="w-full h-full object-cover">
+      </div>
+      <div class="reveal-scale corner-frame h-[220px] md:h-full" style="--i:2">
+        <img src="assets/galeria-generadores.jpg" alt="Generadores eléctricos industriales" class="w-full h-full object-cover">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SOBRE NOSOTROS
+============================================================ -->
+<section id="nosotros" class="relative py-28 md:py-36 bg-slate-50 overflow-hidden">
+  <span class="ghost-index ghost-index-light" aria-hidden="true">02</span>
+  <div class="max-w-[1200px] mx-auto px-6 relative grid lg:grid-cols-2 gap-16 items-center">
+    <div class="reveal">
+      <p class="eyebrow text-green-700 mb-5" data-i18n="about.eyebrow">Sobre nosotros</p>
+      <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-navy-900 mb-6" data-i18n="about.title">
+        Cuatro décadas de experiencia al servicio de la energía
+      </h2>
+      <p class="text-slate-600 text-lg leading-relaxed mb-4" data-i18n="about.p1">
+        Turbo Green Energy Corp es una empresa de servicios energéticos con sede en Palmetto Bay, Miami. Desde hace más de 40 años acompañamos a operadores de la industria Oil &amp; Gas con repuestos para turbinas, soluciones energéticas integrales y, cada vez más, con proyectos de energía verde que acompañan la transición del sector.
+      </p>
+      <p class="text-slate-600 text-lg leading-relaxed" data-i18n="about.p2">
+        <!-- PLACEHOLDER: reemplazar por bio real de liderazgo si se provee -->
+        Nuestro equipo directivo combina décadas de trayectoria técnica y comercial en el sector energético global, con presencia en proyectos de suministro y mantenimiento en múltiples países.
+      </p>
+
+      <div class="mt-10 flex items-center gap-8 flex-wrap">
+        <div class="font-mono-data">
+          <span class="counter text-5xl font-bold text-navy-900" data-target="40">0</span><span class="text-5xl font-bold text-navy-900">+</span>
+          <p class="text-slate-500 text-sm mt-1" data-i18n="about.statLabel">Años de experiencia</p>
+        </div>
+        <div class="w-px h-14 bg-slate-300"></div>
+        <div class="space-y-2">
+          <p class="font-display font-semibold text-navy-900 flex items-center gap-2"><span class="w-1.5 h-1.5 bg-green-500 rounded-full shrink-0"></span><span data-i18n="about.badge1">Alcance global</span></p>
+          <p class="font-display font-semibold text-navy-900 flex items-center gap-2"><span class="w-1.5 h-1.5 bg-green-500 rounded-full shrink-0"></span><span data-i18n="about.badge2">Foco en sostenibilidad</span></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="reveal-scale relative">
+      <div class="corner-frame">
+        <img src="assets/nosotros-planta.jpg"
+             alt="Sala de generadores en planta de energía" class="object-cover w-full h-[460px]">
+      </div>
+      <div class="absolute -bottom-6 -left-6 bg-navy-900 text-white px-6 py-4 shadow-xl hidden sm:block" style="clip-path: polygon(10px 0,100% 0,100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);">
+        <p class="font-mono-data text-green-400 text-sm">SGT 400</p>
+        <p class="text-xs text-slate-300" data-i18n="about.floatingCard">Repuestos certificados</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SERVICIOS / SOLUCIONES — formato "hoja de especificaciones"
+============================================================ -->
+<section id="servicios" class="relative py-28 md:py-36 bg-navy-950 text-white overflow-hidden">
+  <div class="absolute inset-0">
+    <img src="assets/servicios-bg.jpg" alt="Nave industrial con maquinaria pesada" class="w-full h-full object-cover opacity-[.16]">
+    <div class="absolute inset-0 bg-gradient-to-b from-navy-950/85 via-navy-950/93 to-navy-950"></div>
+  </div>
+  <div class="absolute inset-0 blueprint-grid opacity-20"></div>
+  <span class="ghost-index" aria-hidden="true">03</span>
+
+  <div class="max-w-[1200px] mx-auto px-6 relative">
+    <div class="reveal max-w-2xl mb-14">
+      <p class="eyebrow text-green-400 mb-5" data-i18n="services.eyebrow">Qué hacemos</p>
+      <h2 class="text-3xl md:text-4xl font-bold tracking-tight" data-i18n="services.title">Servicios y soluciones</h2>
+    </div>
+
+    <div class="border-y border-white/10 divide-y divide-white/10 stagger">
+      <div class="reveal service-row grid md:grid-cols-[90px_1fr_1.3fr] gap-3 md:gap-10 py-8 px-3 md:px-4 items-start" style="--i:0">
+        <span class="font-mono-data text-green-500/70 text-sm">/ 01</span>
+        <h3 class="font-display font-semibold text-xl" data-i18n="services.card1.title">Repuestos para turbinas</h3>
+        <p class="text-slate-300 text-sm leading-relaxed" data-i18n="services.card1.desc">Suministro de repuestos y componentes para turbinas industriales, incluyendo la línea SGT 400, con foco en calidad y disponibilidad.</p>
+      </div>
+      <div class="reveal service-row grid md:grid-cols-[90px_1fr_1.3fr] gap-3 md:gap-10 py-8 px-3 md:px-4 items-start" style="--i:1">
+        <span class="font-mono-data text-green-500/70 text-sm">/ 02</span>
+        <h3 class="font-display font-semibold text-xl" data-i18n="services.card2.title">Soluciones energéticas</h3>
+        <p class="text-slate-300 text-sm leading-relaxed" data-i18n="services.card2.desc">Acompañamiento integral en proyectos de energía para la industria Oil &amp; Gas, desde el suministro hasta el soporte técnico continuo.</p>
+      </div>
+      <div class="reveal service-row grid md:grid-cols-[90px_1fr_1.3fr] gap-3 md:gap-10 py-8 px-3 md:px-4 items-start" style="--i:2">
+        <span class="font-mono-data text-green-500/70 text-sm">/ 03</span>
+        <h3 class="font-display font-semibold text-xl" data-i18n="services.card3.title">Energía verde</h3>
+        <p class="text-slate-300 text-sm leading-relaxed" data-i18n="services.card3.desc">Desarrollo de soluciones sostenibles que acompañan la transición energética de nuestros clientes hacia fuentes más limpias.</p>
+      </div>
+      <div class="reveal service-row grid md:grid-cols-[90px_1fr_1.3fr] gap-3 md:gap-10 py-8 px-3 md:px-4 items-start" style="--i:3">
+        <span class="font-mono-data text-green-500/70 text-sm">/ 04</span>
+        <h3 class="font-display font-semibold text-xl" data-i18n="services.card4.title">Soporte técnico global</h3>
+        <p class="text-slate-300 text-sm leading-relaxed" data-i18n="services.card4.desc">Asistencia técnica y logística para operaciones energéticas en múltiples países, con respuesta ágil.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     VENTAJAS / POR QUÉ ELEGIRNOS — grilla tipo hoja de datos
+============================================================ -->
+<section id="ventajas" class="relative py-28 md:py-36 bg-slate-50 overflow-hidden">
+  <span class="ghost-index ghost-index-light" aria-hidden="true">04</span>
+  <div class="max-w-[1200px] mx-auto px-6 relative">
+    <div class="reveal max-w-2xl mb-14">
+      <p class="eyebrow text-green-700 mb-5" data-i18n="advantages.eyebrow">Por qué elegirnos</p>
+      <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-navy-900" data-i18n="advantages.title">Ventajas de trabajar con nosotros</h2>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-slate-200 border border-slate-200 stagger">
+      <div class="reveal adv-card bg-white p-7" style="--i:0">
+        <span class="font-mono-data text-xs text-green-700/70">/ 01</span>
+        <h3 class="font-display font-semibold text-navy-900 mt-3 mb-2" data-i18n="advantages.item1.title">40+ años de trayectoria</h3>
+        <p class="text-slate-600 text-sm" data-i18n="advantages.item1.desc">Experiencia consolidada en la industria energética global.</p>
+      </div>
+      <div class="reveal adv-card bg-white p-7" style="--i:1">
+        <span class="font-mono-data text-xs text-green-700/70">/ 02</span>
+        <h3 class="font-display font-semibold text-navy-900 mt-3 mb-2" data-i18n="advantages.item2.title">Alcance global</h3>
+        <p class="text-slate-600 text-sm" data-i18n="advantages.item2.desc">Servicio a clientes de la industria energética en distintos países.</p>
+      </div>
+      <div class="reveal adv-card bg-white p-7" style="--i:2">
+        <span class="font-mono-data text-xs text-green-700/70">/ 03</span>
+        <h3 class="font-display font-semibold text-navy-900 mt-3 mb-2" data-i18n="advantages.item3.title">Foco en sostenibilidad</h3>
+        <p class="text-slate-600 text-sm" data-i18n="advantages.item3.desc">Soluciones que acompañan la transición hacia energías más limpias.</p>
+      </div>
+      <div class="reveal adv-card bg-white p-7" style="--i:3">
+        <span class="font-mono-data text-xs text-green-700/70">/ 04</span>
+        <h3 class="font-display font-semibold text-navy-900 mt-3 mb-2" data-i18n="advantages.item4.title">Especialización técnica</h3>
+        <p class="text-slate-600 text-sm" data-i18n="advantages.item4.desc">Conocimiento profundo de turbinas industriales y sus repuestos.</p>
+      </div>
+      <div class="reveal adv-card bg-white p-7" style="--i:4">
+        <span class="font-mono-data text-xs text-green-700/70">/ 05</span>
+        <h3 class="font-display font-semibold text-navy-900 mt-3 mb-2" data-i18n="advantages.item5.title">Foco en Oil &amp; Gas</h3>
+        <p class="text-slate-600 text-sm" data-i18n="advantages.item5.desc">Soluciones pensadas para las necesidades específicas del sector.</p>
+      </div>
+      <div class="reveal adv-card bg-white p-7" style="--i:5">
+        <span class="font-mono-data text-xs text-green-700/70">/ 06</span>
+        <h3 class="font-display font-semibold text-navy-900 mt-3 mb-2" data-i18n="advantages.item6.title">Trato directo y confiable</h3>
+        <p class="text-slate-600 text-sm" data-i18n="advantages.item6.desc">Comunicación cercana y seguimiento personalizado en cada proyecto.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     TESTIMONIOS
+     ⚠️ PLACEHOLDER: reemplazar por testimonios reales de clientes.
+============================================================ -->
+<section id="testimonios" class="relative py-28 md:py-36 bg-navy-900 text-white overflow-hidden">
+  <div class="absolute inset-0">
+    <img src="assets/testimonios-bg.jpg" alt="Tuberías y válvulas industriales internas" class="w-full h-full object-cover opacity-[.14]">
+    <div class="absolute inset-0 bg-gradient-to-b from-navy-900/85 via-navy-900/93 to-navy-900"></div>
+  </div>
+  <span class="ghost-index" aria-hidden="true">05</span>
+  <div class="max-w-[1200px] mx-auto px-6 relative">
+    <div class="reveal max-w-2xl mb-14">
+      <p class="eyebrow text-green-400 mb-5" data-i18n="testimonials.eyebrow">Confianza</p>
+      <h2 class="text-3xl md:text-4xl font-bold tracking-tight" data-i18n="testimonials.title">Lo que dicen nuestros clientes</h2>
+      <p class="text-slate-500 text-xs mt-3 font-mono-data" data-i18n="testimonials.note">* Testimonios de ejemplo — reemplazar por citas reales de clientes.</p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6 stagger">
+      <div class="reveal testimonial-card corner-frame bg-white/5 border border-white/10 p-7" style="--i:0">
+        <span class="font-display text-4xl text-green-500/40 leading-none">&ldquo;</span>
+        <p class="text-slate-200 text-sm leading-relaxed mt-2 mb-6" data-i18n="testimonials.t1.quote">"[Cita de testimonio placeholder] — El equipo de Turbo Green Energy respondió con rapidez y profesionalismo en cada etapa del proyecto."</p>
+        <div class="flex items-center gap-3">
+          <img src="https://ui-avatars.com/api/?name=Cliente+Uno&background=17E3A6&color=04090F&bold=true" alt="Avatar cliente" class="w-10 h-10">
+          <div>
+            <p class="font-semibold text-sm" data-i18n="testimonials.t1.name">[Nombre Apellido]</p>
+            <p class="text-slate-400 text-xs" data-i18n="testimonials.t1.role">[Cargo, Empresa]</p>
+          </div>
+        </div>
+      </div>
+      <div class="reveal testimonial-card corner-frame bg-white/5 border border-white/10 p-7" style="--i:1">
+        <span class="font-display text-4xl text-green-500/40 leading-none">&ldquo;</span>
+        <p class="text-slate-200 text-sm leading-relaxed mt-2 mb-6" data-i18n="testimonials.t2.quote">"[Cita de testimonio placeholder] — La disponibilidad de repuestos para nuestra SGT 400 fue clave para mantener la operación sin interrupciones."</p>
+        <div class="flex items-center gap-3">
+          <img src="https://ui-avatars.com/api/?name=Cliente+Dos&background=0F6B4E&color=F8FAFC&bold=true" alt="Avatar cliente" class="w-10 h-10">
+          <div>
+            <p class="font-semibold text-sm" data-i18n="testimonials.t2.name">[Nombre Apellido]</p>
+            <p class="text-slate-400 text-xs" data-i18n="testimonials.t2.role">[Cargo, Empresa]</p>
+          </div>
+        </div>
+      </div>
+      <div class="reveal testimonial-card corner-frame bg-white/5 border border-white/10 p-7" style="--i:2">
+        <span class="font-display text-4xl text-green-500/40 leading-none">&ldquo;</span>
+        <p class="text-slate-200 text-sm leading-relaxed mt-2 mb-6" data-i18n="testimonials.t3.quote">"[Cita de testimonio placeholder] — Valoramos especialmente su enfoque en soluciones sostenibles para nuestros próximos proyectos."</p>
+        <div class="flex items-center gap-3">
+          <img src="https://ui-avatars.com/api/?name=Cliente+Tres&background=163459&color=F8FAFC&bold=true" alt="Avatar cliente" class="w-10 h-10">
+          <div>
+            <p class="font-semibold text-sm" data-i18n="testimonials.t3.name">[Nombre Apellido]</p>
+            <p class="text-slate-400 text-xs" data-i18n="testimonials.t3.role">[Cargo, Empresa]</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CONTACTO
+============================================================ -->
+<section id="contacto" class="relative py-28 md:py-36 bg-slate-50 overflow-hidden">
+  <span class="ghost-index ghost-index-light" aria-hidden="true">06</span>
+  <div class="max-w-[1200px] mx-auto px-6 relative">
+    <div class="reveal max-w-2xl mb-14">
+      <p class="eyebrow text-green-700 mb-5" data-i18n="contact.eyebrow">Hablemos</p>
+      <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-navy-900" data-i18n="contact.title">Contáctenos</h2>
+    </div>
+
+    <div class="grid lg:grid-cols-5 gap-10">
+      <!-- Formulario -->
+      <form id="contact-form" class="reveal corner-frame lg:col-span-3 bg-white border border-slate-200 p-8 space-y-5">
+        <div class="grid sm:grid-cols-2 gap-5">
+          <div>
+            <label for="name" class="block text-sm font-medium text-slate-700 mb-1.5" data-i18n="contact.form.name">Nombre completo</label>
+            <input id="name" name="name" type="text" required class="w-full border border-slate-300 px-4 py-2.5 focus:border-green-500 outline-none">
+          </div>
+          <div>
+            <label for="company" class="block text-sm font-medium text-slate-700 mb-1.5" data-i18n="contact.form.company">Empresa</label>
+            <input id="company" name="company" type="text" class="w-full border border-slate-300 px-4 py-2.5 focus:border-green-500 outline-none">
+          </div>
+        </div>
+        <div class="grid sm:grid-cols-2 gap-5">
+          <div>
+            <label for="email" class="block text-sm font-medium text-slate-700 mb-1.5" data-i18n="contact.form.email">Email</label>
+            <input id="email" name="email" type="email" required class="w-full border border-slate-300 px-4 py-2.5 focus:border-green-500 outline-none">
+          </div>
+          <div>
+            <label for="phone" class="block text-sm font-medium text-slate-700 mb-1.5" data-i18n="contact.form.phone">Teléfono</label>
+            <input id="phone" name="phone" type="tel" class="w-full border border-slate-300 px-4 py-2.5 focus:border-green-500 outline-none">
+          </div>
+        </div>
+        <div>
+          <label for="message" class="block text-sm font-medium text-slate-700 mb-1.5" data-i18n="contact.form.message">Mensaje</label>
+          <textarea id="message" name="message" rows="4" required class="w-full border border-slate-300 px-4 py-2.5 focus:border-green-500 outline-none"></textarea>
+        </div>
+        <!--
+          NOTA TÉCNICA: este formulario es solo front-end. Para recibir los envíos,
+          conectalo a un webhook de n8n, Formspree o EmailJS en la función handleSubmit() del script.
+        -->
+        <button type="submit" class="btn-primary w-full justify-center" data-i18n="contact.form.submit">Enviar mensaje</button>
+        <p id="form-success" class="hidden text-green-700 text-sm font-medium" data-i18n="contact.form.success">¡Gracias! Recibimos tu mensaje y te contactaremos a la brevedad.</p>
+      </form>
+
+      <!-- Datos de contacto + mapa -->
+      <div class="reveal lg:col-span-2 space-y-6">
+        <div class="bg-navy-900 text-white p-7 space-y-5">
+          <div class="flex gap-3">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#17E3A6" stroke-width="2" class="shrink-0 mt-0.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.362 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            <div>
+              <p class="text-xs text-slate-400" data-i18n="contact.phoneLabel">Teléfono</p>
+              <p class="font-medium">[TELÉFONO PENDIENTE]</p>
+            </div>
+          </div>
+          <div class="flex gap-3">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#17E3A6" stroke-width="2" class="shrink-0 mt-0.5"><path d="M22 6l-10 7L2 6"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>
+            <div>
+              <p class="text-xs text-slate-400" data-i18n="contact.emailLabel">Email</p>
+              <p class="font-medium">[EMAIL PENDIENTE]</p>
+            </div>
+          </div>
+          <div class="flex gap-3">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#17E3A6" stroke-width="2" class="shrink-0 mt-0.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <div>
+              <p class="text-xs text-slate-400" data-i18n="contact.addressLabel">Dirección</p>
+              <p class="font-medium" data-i18n="contact.addressValue">Palmetto Bay, Miami, FL [DIRECCIÓN EXACTA PENDIENTE]</p>
+            </div>
+          </div>
+          <a href="https://wa.me/584129896599" target="_blank" rel="noopener" class="flex gap-3 group">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#17E3A6" stroke-width="2" class="shrink-0 mt-0.5"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
+            <div>
+              <p class="text-xs text-slate-400">WhatsApp</p>
+              <p class="font-medium group-hover:text-green-400 transition-colors">+58 412 9896599</p>
+            </div>
+          </a>
+        </div>
+
+        <!-- Mapa embebido de Google (sin API key) -->
+        <div class="corner-frame overflow-hidden border border-slate-200 h-64">
+          <iframe
+            src="https://maps.google.com/maps?q=Palmetto%20Bay%2C%20Miami%2C%20FL&t=&z=13&ie=UTF8&iwloc=&output=embed"
+            width="100%" height="100%" style="border:0" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Ubicación de Turbo Green Energy Corp"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FOOTER — Clientes atendidos (marquee) + info legal
+     ⚠️ PLACEHOLDER: reemplazar los logos por los reales cuando los tengas.
+============================================================ -->
+<footer class="relative bg-navy-950 text-slate-400 pt-20 pb-8 overflow-hidden">
+  <div class="absolute inset-0 blueprint-grid opacity-20"></div>
+  <div class="max-w-[1200px] mx-auto px-6 relative">
+    <p class="reveal text-center eyebrow text-slate-500 mb-10 mx-auto w-fit" data-i18n="footer.clientsTitle">Clientes que atendimos</p>
+
+    <div class="reveal marquee mb-20">
+      <div class="marquee-track">
+        <div class="h-14 px-8 border border-white/10 bg-white/5 flex items-center justify-center text-xs text-slate-500 font-mono-data whitespace-nowrap">[Cliente 1]</div>
+        <div class="h-14 px-8 border border-white/10 bg-white/5 flex items-center justify-center text-xs text-slate-500 font-mono-data whitespace-nowrap">[Cliente 2]</div>
+        <div class="h-14 px-8 border border-white/10 bg-white/5 flex items-center justify-center text-xs text-slate-500 font-mono-data whitespace-nowrap">[Cliente 3]</div>
+        <div class="h-14 px-8 border border-white/10 bg-white/5 flex items-center justify-center text-xs text-slate-500 font-mono-data whitespace-nowrap">[Cliente 4]</div>
+        <div class="h-14 px-8 border border-white/10 bg-white/5 flex items-center justify-center text-xs text-slate-500 font-mono-data whitespace-nowrap">[Cliente 5]</div>
+        <!-- duplicado para loop continuo del marquee -->
+        <div class="h-14 px-8 border border-white/10 bg-white/5 flex items-center justify-center text-xs text-slate-500 font-mono-data whitespace-nowrap">[Cliente 1]</div>
+        <div class="h-14 px-8 border border-white/10 bg-white/5 flex items-center justify-center text-xs text-slate-500 font-mono-data whitespace-nowrap">[Cliente 2]</div>
+        <div class="h-14 px-8 border border-white/10 bg-white/5 flex items-center justify-center text-xs text-slate-500 font-mono-data whitespace-nowrap">[Cliente 3]</div>
+        <div class="h-14 px-8 border border-white/10 bg-white/5 flex items-center justify-center text-xs text-slate-500 font-mono-data whitespace-nowrap">[Cliente 4]</div>
+        <div class="h-14 px-8 border border-white/10 bg-white/5 flex items-center justify-center text-xs text-slate-500 font-mono-data whitespace-nowrap">[Cliente 5]</div>
+      </div>
+    </div>
+
+    <div class="flex flex-col md:flex-row items-center justify-between gap-4 border-t border-white/10 pt-8">
+      <div class="flex items-center gap-2 text-slate-300">
+        <svg width="22" height="22" viewBox="0 0 100 100" fill="none"><rect width="100" height="100" rx="4" fill="#17E3A6"/><path d="M50 18 L64 50 L50 44 L36 50 Z" fill="#04090F"/></svg>
+        <span class="font-display font-semibold text-sm">Turbo Green Energy Corp</span>
+      </div>
+      <p class="text-xs font-mono-data" data-i18n="footer.copy">© <span id="year"></span> Turbo Green Energy Corp. Todos los derechos reservados.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================================================
+     BOTÓN FLOTANTE DE WHATSAPP
+============================================================ -->
+<a href="https://wa.me/584129896599" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp"
+   class="fixed bottom-6 right-6 z-50 w-14 h-14 bg-green-500 flex items-center justify-center shadow-xl hover:bg-green-400 transition-colors"
+   style="clip-path: polygon(10px 0,100% 0,100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);">
+  <span class="absolute inset-0 bg-green-500 opacity-40 pulse-dot" style="clip-path: polygon(10px 0,100% 0,100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);"></span>
+  <svg class="relative z-10" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#04090F" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
+</a>
+
+<!-- ============================================================
+     JAVASCRIPT
+============================================================ -->
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+
+/* ---------- Nav scroll state ---------- */
+const nav = document.getElementById('site-nav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 40);
+}, { passive: true });
+
+/* ---------- Menú móvil ---------- */
+const menuBtn = document.getElementById('mobile-menu-btn');
+const mobileMenu = document.getElementById('mobile-menu');
+const iconOpen = document.getElementById('icon-open');
+const iconClose = document.getElementById('icon-close');
+menuBtn.addEventListener('click', () => {
+  const isOpen = !mobileMenu.classList.contains('hidden');
+  mobileMenu.classList.toggle('hidden');
+  iconOpen.classList.toggle('hidden', !isOpen);
+  iconClose.classList.toggle('hidden', isOpen);
+  menuBtn.setAttribute('aria-expanded', String(!isOpen));
+});
+document.querySelectorAll('.mobile-link').forEach(link => {
+  link.addEventListener('click', () => {
+    mobileMenu.classList.add('hidden');
+    iconOpen.classList.remove('hidden');
+    iconClose.classList.add('hidden');
+  });
+});
+
+/* ---------- Reveal on scroll (Intersection Observer) ---------- */
+const revealEls = document.querySelectorAll('.reveal, .reveal-scale');
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('is-visible');
+      revealObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.15 });
+revealEls.forEach(el => revealObserver.observe(el));
+
+/* ---------- Counter animado (+40 años) ---------- */
+const counters = document.querySelectorAll('.counter');
+const counterObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+    const el = entry.target;
+    const target = parseInt(el.dataset.target, 10);
+    let current = 0;
+    const step = Math.max(1, Math.round(target / 60));
+    const tick = () => {
+      current += step;
+      if (current >= target) { el.textContent = target; return; }
+      el.textContent = current;
+      requestAnimationFrame(tick);
+    };
+    tick();
+    counterObserver.unobserve(el);
+  });
+}, { threshold: 0.5 });
+counters.forEach(c => counterObserver.observe(c));
+
+/* ---------- Parallax sutil en el hero ---------- */
+const heroBg = document.getElementById('hero-bg');
+window.addEventListener('scroll', () => {
+  const y = window.scrollY;
+  if (y < window.innerHeight) {
+    heroBg.style.transform = `translateY(${y * 0.25}px)`;
+  }
+}, { passive: true });
+
+/* ---------- Formulario de contacto (solo front-end) ---------- */
+document.getElementById('contact-form').addEventListener('submit', function (e) {
+  e.preventDefault();
+  // TODO: conectar a un webhook de n8n / Formspree / EmailJS para recibir los envíos reales.
+  document.getElementById('form-success').classList.remove('hidden');
+  this.reset();
+});
+
+/* ============================================================
+   SELECTOR DE IDIOMA (ES / EN / PT)
+   Traducciones de todo el contenido visible del sitio.
+============================================================ */
+const translations = {
+  es: {
+    'nav.home':'Inicio','nav.about':'Nosotros','nav.services':'Servicios','nav.advantages':'Ventajas',
+    'nav.testimonials':'Testimonios','nav.contact':'Contacto','nav.cta':'Solicitar cotización',
+    'hero.eyebrow':'Repuestos para turbinas · Energía verde · Alcance global',
+    'hero.title':'Potenciando <span class="text-green-400">la transición</span> energética global',
+    'hero.subtitle':'Más de 40 años entregando repuestos para turbinas (como la SGT 400), soluciones energéticas integrales y proyectos de energía verde para la industria Oil & Gas en todo el mundo.',
+    'hero.ctaPrimary':'Solicitar cotización','hero.ctaSecondary':'Conocer servicios',
+    'gallery.eyebrow':'Instalaciones','gallery.title':'Equipos y plantas en operación',
+    'about.eyebrow':'Sobre nosotros','about.title':'Cuatro décadas de experiencia al servicio de la energía',
+    'about.p1':'Turbo Green Energy Corp es una empresa de servicios energéticos con sede en Palmetto Bay, Miami. Desde hace más de 40 años acompañamos a operadores de la industria Oil & Gas con repuestos para turbinas, soluciones energéticas integrales y, cada vez más, con proyectos de energía verde que acompañan la transición del sector.',
+    'about.p2':'Nuestro equipo directivo combina décadas de trayectoria técnica y comercial en el sector energético global, con presencia en proyectos de suministro y mantenimiento en múltiples países.',
+    'about.statLabel':'Años de experiencia','about.badge1':'Alcance global','about.badge2':'Foco en sostenibilidad',
+    'about.floatingCard':'Repuestos certificados',
+    'services.eyebrow':'Qué hacemos','services.title':'Servicios y soluciones',
+    'services.card1.title':'Repuestos para turbinas','services.card1.desc':'Suministro de repuestos y componentes para turbinas industriales, incluyendo la línea SGT 400, con foco en calidad y disponibilidad.',
+    'services.card2.title':'Soluciones energéticas','services.card2.desc':'Acompañamiento integral en proyectos de energía para la industria Oil & Gas, desde el suministro hasta el soporte técnico continuo.',
+    'services.card3.title':'Energía verde','services.card3.desc':'Desarrollo de soluciones sostenibles que acompañan la transición energética de nuestros clientes hacia fuentes más limpias.',
+    'services.card4.title':'Soporte técnico global','services.card4.desc':'Asistencia técnica y logística para operaciones energéticas en múltiples países, con respuesta ágil.',
+    'advantages.eyebrow':'Por qué elegirnos','advantages.title':'Ventajas de trabajar con nosotros',
+    'advantages.item1.title':'40+ años de trayectoria','advantages.item1.desc':'Experiencia consolidada en la industria energética global.',
+    'advantages.item2.title':'Alcance global','advantages.item2.desc':'Servicio a clientes de la industria energética en distintos países.',
+    'advantages.item3.title':'Foco en sostenibilidad','advantages.item3.desc':'Soluciones que acompañan la transición hacia energías más limpias.',
+    'advantages.item4.title':'Especialización técnica','advantages.item4.desc':'Conocimiento profundo de turbinas industriales y sus repuestos.',
+    'advantages.item5.title':'Foco en Oil & Gas','advantages.item5.desc':'Soluciones pensadas para las necesidades específicas del sector.',
+    'advantages.item6.title':'Trato directo y confiable','advantages.item6.desc':'Comunicación cercana y seguimiento personalizado en cada proyecto.',
+    'testimonials.eyebrow':'Confianza','testimonials.title':'Lo que dicen nuestros clientes',
+    'testimonials.note':'* Testimonios de ejemplo — reemplazar por citas reales de clientes.',
+    'testimonials.t1.quote':'"[Cita de testimonio placeholder] — El equipo de Turbo Green Energy respondió con rapidez y profesionalismo en cada etapa del proyecto."',
+    'testimonials.t1.name':'[Nombre Apellido]','testimonials.t1.role':'[Cargo, Empresa]',
+    'testimonials.t2.quote':'"[Cita de testimonio placeholder] — La disponibilidad de repuestos para nuestra SGT 400 fue clave para mantener la operación sin interrupciones."',
+    'testimonials.t2.name':'[Nombre Apellido]','testimonials.t2.role':'[Cargo, Empresa]',
+    'testimonials.t3.quote':'"[Cita de testimonio placeholder] — Valoramos especialmente su enfoque en soluciones sostenibles para nuestros próximos proyectos."',
+    'testimonials.t3.name':'[Nombre Apellido]','testimonials.t3.role':'[Cargo, Empresa]',
+    'contact.eyebrow':'Hablemos','contact.title':'Contáctenos',
+    'contact.form.name':'Nombre completo','contact.form.company':'Empresa','contact.form.email':'Email',
+    'contact.form.phone':'Teléfono','contact.form.message':'Mensaje','contact.form.submit':'Enviar mensaje',
+    'contact.form.success':'¡Gracias! Recibimos tu mensaje y te contactaremos a la brevedad.',
+    'contact.phoneLabel':'Teléfono','contact.emailLabel':'Email','contact.addressLabel':'Dirección',
+    'contact.addressValue':'Palmetto Bay, Miami, FL [DIRECCIÓN EXACTA PENDIENTE]',
+    'footer.clientsTitle':'Clientes que atendimos',
+    'footer.copy':'© <span id="year"></span> Turbo Green Energy Corp. Todos los derechos reservados.',
+  },
+  en: {
+    'nav.home':'Home','nav.about':'About','nav.services':'Services','nav.advantages':'Advantages',
+    'nav.testimonials':'Testimonials','nav.contact':'Contact','nav.cta':'Request a quote',
+    'hero.eyebrow':'Turbine parts · Green energy · Global reach',
+    'hero.title':'Powering the global <span class="text-green-400">energy transition</span>',
+    'hero.subtitle':'Over 40 years supplying turbine parts (including the SGT 400), comprehensive energy solutions, and green energy projects for the Oil & Gas industry worldwide.',
+    'hero.ctaPrimary':'Request a quote','hero.ctaSecondary':'Explore services',
+    'gallery.eyebrow':'Facilities','gallery.title':'Equipment and plants in operation',
+    'about.eyebrow':'About us','about.title':'Four decades of experience serving the energy industry',
+    'about.p1':'Turbo Green Energy Corp is an energy services company based in Palmetto Bay, Miami. For over 40 years we have supported Oil & Gas operators with turbine parts, comprehensive energy solutions, and increasingly, green energy projects that support the energy transition of the sector.',
+    'about.p2':'Our leadership team combines decades of technical and commercial experience in the global energy sector, with a track record on supply and maintenance projects across multiple countries.',
+    'about.statLabel':'Years of experience','about.badge1':'Global reach','about.badge2':'Sustainability focus',
+    'about.floatingCard':'Certified parts',
+    'services.eyebrow':'What we do','services.title':'Services & solutions',
+    'services.card1.title':'Turbine parts','services.card1.desc':'Supply of parts and components for industrial turbines, including the SGT 400 line, with a focus on quality and availability.',
+    'services.card2.title':'Energy solutions','services.card2.desc':'End-to-end support for energy projects in the Oil & Gas industry, from supply to ongoing technical support.',
+    'services.card3.title':'Green energy','services.card3.desc':'Development of sustainable solutions that support the energy transition of our clients toward cleaner sources.',
+    'services.card4.title':'Global technical support','services.card4.desc':'Technical and logistics assistance for energy operations across multiple countries, with fast response times.',
+    'advantages.eyebrow':'Why choose us','advantages.title':'Advantages of working with us',
+    'advantages.item1.title':'40+ years of experience','advantages.item1.desc':'Solid track record in the global energy industry.',
+    'advantages.item2.title':'Global reach','advantages.item2.desc':'Serving energy industry clients across multiple countries.',
+    'advantages.item3.title':'Sustainability focus','advantages.item3.desc':'Solutions that support the transition to cleaner energy.',
+    'advantages.item4.title':'Technical expertise','advantages.item4.desc':'Deep knowledge of industrial turbines and their parts.',
+    'advantages.item5.title':'Oil & Gas focus','advantages.item5.desc':'Solutions built for the specific needs of the sector.',
+    'advantages.item6.title':'Direct, reliable service','advantages.item6.desc':'Close communication and personalized follow-up on every project.',
+    'testimonials.eyebrow':'Trust','testimonials.title':'What our clients say',
+    'testimonials.note':'* Sample testimonials — replace with real client quotes.',
+    'testimonials.t1.quote':'"[Placeholder testimonial] — The Turbo Green Energy team responded quickly and professionally at every stage of the project."',
+    'testimonials.t1.name':'[Full Name]','testimonials.t1.role':'[Title, Company]',
+    'testimonials.t2.quote':'"[Placeholder testimonial] — Parts availability for our SGT 400 was key to keeping operations running without interruption."',
+    'testimonials.t2.name':'[Full Name]','testimonials.t2.role':'[Title, Company]',
+    'testimonials.t3.quote':'"[Placeholder testimonial] — We especially value their focus on sustainable solutions for our upcoming projects."',
+    'testimonials.t3.name':'[Full Name]','testimonials.t3.role':'[Title, Company]',
+    'contact.eyebrow':"Let's talk",'contact.title':'Contact us',
+    'contact.form.name':'Full name','contact.form.company':'Company','contact.form.email':'Email',
+    'contact.form.phone':'Phone','contact.form.message':'Message','contact.form.submit':'Send message',
+    'contact.form.success':"Thank you! We've received your message and will be in touch shortly.",
+    'contact.phoneLabel':'Phone','contact.emailLabel':'Email','contact.addressLabel':'Address',
+    'contact.addressValue':'Palmetto Bay, Miami, FL [EXACT ADDRESS PENDING]',
+    'footer.clientsTitle':'Clients we have served',
+    'footer.copy':'© <span id="year"></span> Turbo Green Energy Corp. All rights reserved.',
+  },
+  pt: {
+    'nav.home':'Início','nav.about':'Sobre','nav.services':'Serviços','nav.advantages':'Vantagens',
+    'nav.testimonials':'Depoimentos','nav.contact':'Contato','nav.cta':'Solicitar orçamento',
+    'hero.eyebrow':'Peças para turbinas · Energia verde · Alcance global',
+    'hero.title':'Impulsionando <span class="text-green-400">a transição</span> energética global',
+    'hero.subtitle':'Mais de 40 anos fornecendo peças para turbinas (incluindo a SGT 400), soluções energéticas completas e projetos de energia verde para a indústria de Oil & Gas em todo o mundo.',
+    'hero.ctaPrimary':'Solicitar orçamento','hero.ctaSecondary':'Conhecer serviços',
+    'gallery.eyebrow':'Instalações','gallery.title':'Equipamentos e plantas em operação',
+    'about.eyebrow':'Sobre nós','about.title':'Quatro décadas de experiência a serviço da energia',
+    'about.p1':'A Turbo Green Energy Corp é uma empresa de serviços energéticos sediada em Palmetto Bay, Miami. Há mais de 40 anos apoiamos operadores da indústria de Oil & Gas com peças para turbinas, soluções energéticas completas e, cada vez mais, com projetos de energia verde que acompanham a transição do setor.',
+    'about.p2':'Nossa equipe de liderança combina décadas de experiência técnica e comercial no setor energético global, com atuação em projetos de fornecimento e manutenção em diversos países.',
+    'about.statLabel':'Anos de experiência','about.badge1':'Alcance global','about.badge2':'Foco em sustentabilidade',
+    'about.floatingCard':'Peças certificadas',
+    'services.eyebrow':'O que fazemos','services.title':'Serviços e soluções',
+    'services.card1.title':'Peças para turbinas','services.card1.desc':'Fornecimento de peças e componentes para turbinas industriais, incluindo a linha SGT 400, com foco em qualidade e disponibilidade.',
+    'services.card2.title':'Soluções energéticas','services.card2.desc':'Apoio completo em projetos de energia para a indústria de Oil & Gas, do fornecimento ao suporte técnico contínuo.',
+    'services.card3.title':'Energia verde','services.card3.desc':'Desenvolvimento de soluções sustentáveis que acompanham a transição energética de nossos clientes rumo a fontes mais limpas.',
+    'services.card4.title':'Suporte técnico global','services.card4.desc':'Assistência técnica e logística para operações energéticas em diversos países, com resposta ágil.',
+    'advantages.eyebrow':'Por que nos escolher','advantages.title':'Vantagens de trabalhar conosco',
+    'advantages.item1.title':'Mais de 40 anos de trajetória','advantages.item1.desc':'Experiência consolidada na indústria energética global.',
+    'advantages.item2.title':'Alcance global','advantages.item2.desc':'Atendimento a clientes da indústria energética em diversos países.',
+    'advantages.item3.title':'Foco em sustentabilidade','advantages.item3.desc':'Soluções que acompanham a transição para energias mais limpas.',
+    'advantages.item4.title':'Especialização técnica','advantages.item4.desc':'Profundo conhecimento de turbinas industriais e suas peças.',
+    'advantages.item5.title':'Foco em Oil & Gas','advantages.item5.desc':'Soluções pensadas para as necessidades específicas do setor.',
+    'advantages.item6.title':'Atendimento direto e confiável','advantages.item6.desc':'Comunicação próxima e acompanhamento personalizado em cada projeto.',
+    'testimonials.eyebrow':'Confiança','testimonials.title':'O que nossos clientes dizem',
+    'testimonials.note':'* Depoimentos de exemplo — substituir por citações reais de clientes.',
+    'testimonials.t1.quote':'"[Depoimento placeholder] — A equipe da Turbo Green Energy respondeu com rapidez e profissionalismo em cada etapa do projeto."',
+    'testimonials.t1.name':'[Nome Completo]','testimonials.t1.role':'[Cargo, Empresa]',
+    'testimonials.t2.quote':'"[Depoimento placeholder] — A disponibilidade de peças para nossa SGT 400 foi fundamental para manter a operação sem interrupções."',
+    'testimonials.t2.name':'[Nome Completo]','testimonials.t2.role':'[Cargo, Empresa]',
+    'testimonials.t3.quote':'"[Depoimento placeholder] — Valorizamos especialmente o foco deles em soluções sustentáveis para nossos próximos projetos."',
+    'testimonials.t3.name':'[Nome Completo]','testimonials.t3.role':'[Cargo, Empresa]',
+    'contact.eyebrow':'Vamos conversar','contact.title':'Fale conosco',
+    'contact.form.name':'Nome completo','contact.form.company':'Empresa','contact.form.email':'Email',
+    'contact.form.phone':'Telefone','contact.form.message':'Mensagem','contact.form.submit':'Enviar mensagem',
+    'contact.form.success':'Obrigado! Recebemos sua mensagem e entraremos em contato em breve.',
+    'contact.phoneLabel':'Telefone','contact.emailLabel':'Email','contact.addressLabel':'Endereço',
+    'contact.addressValue':'Palmetto Bay, Miami, FL [ENDEREÇO EXATO PENDENTE]',
+    'footer.clientsTitle':'Clientes que atendemos',
+    'footer.copy':'© <span id="year"></span> Turbo Green Energy Corp. Todos os direitos reservados.',
+  }
+};
+
+function applyLanguage(lang) {
+  document.documentElement.lang = lang;
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    const value = translations[lang][key];
+    if (value === undefined) return;
+    if (key === 'footer.copy') {
+      el.innerHTML = value.replace('<span id="year">', `<span id="year">${new Date().getFullYear()}`);
+    } else {
+      el.innerHTML = value;
+    }
+  });
+  document.querySelectorAll('[data-lang-switch]').forEach(btn => {
+    const active = btn.getAttribute('data-lang-switch') === lang;
+    btn.classList.toggle('bg-green-500/90', active);
+    btn.classList.toggle('text-slate-950', active);
+    btn.classList.toggle('text-slate-950', active);
+    btn.classList.toggle('text-slate-50', active);
+    btn.classList.toggle('text-slate-300', !active);
+  });
+}
+
+document.querySelectorAll('[data-lang-switch]').forEach(btn => {
+  btn.addEventListener('click', () => applyLanguage(btn.getAttribute('data-lang-switch')));
+});
+
+// Idioma inicial
+applyLanguage('es');
+</script>
+
+</body>
+</html>
